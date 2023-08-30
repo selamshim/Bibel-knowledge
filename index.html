@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+  <!-- font awesome and google font --> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+  integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+
+  
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Bible quize</title>
 </head>
 <body>
+
+
+    <div class="container">
+        <div class ="question-header">
+            <h2 id="question">the text of a question</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="choice-a" class="choice">
+                    <label for="choice-a" id="choice-a-text"> choice</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="answer" id="choice-b" class="choice">
+                    <label for="choice-b" id="choice-b-text"> choice</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="answer" id="choice-c" class="choice">
+                    <label for="choice-c" id="choice-c-text"> choice</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="answer" id="choice-d" class="choice">
+                    <label for="choice-d" id="choice-d-text"> choice</label>
+                </li>
+            </ul>
+        </div>
+
+        <button id="submit">Submit</button>
+
+    </div>
+    
     
     <script src="assets/js/script.js"></script>
 </body>
