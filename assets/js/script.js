@@ -36,7 +36,7 @@ const questionData = [
         a: "Into the sea",
         b: "Fire",
         c: "Pack of wolves",
-        d: "SLion's den",
+        d: "Lion's den",
         correct: "d",
     },
     {
@@ -81,7 +81,7 @@ const questionData = [
     },
 ];
 const quiz= document.getElementById('quiz')
-const answerEls = document.querySelectorAll('.answer')
+const answerEls = document.querySelectorAll('.quizAnswer')
 const questionEl = document.getElementById('question')
 const choice_a_text = document.getElementById('choice_a_text')
 const choice_b_text = document.getElementById('choice_b_text')
@@ -100,3 +100,32 @@ function loadQuiz() {
     choice_c_text.innerText = currentQuestionData.c
     choice_d_text.innerText = currentQuestionData.d
 }
+function deselectAnswers() {
+    answerEls.forEach(answerEl => answerEl.checked = false)
+}
+function getSelected() {
+    let quizAnswer
+    answerEls.forEach(answerEl => {
+        if(answerEl.checked) {
+            quizAnswer = answerEl.id
+        }
+    })
+    return quizAnswer
+}
+submitBtn.addEventListener('click', () => {
+    const quizAnswer = getSelected()
+    if(quizAnswer) {
+       if(quizAnswer === questionData[currentQuiz].correct) {
+           score++
+       }
+       currentQuiz++
+       if(currentQuiz < questionData.length) {
+           loadQuiz()
+       } else {
+           quiz.innerHTML = `
+           <h2>You answered ${score}/${questionData.length} questions correctly</h2>
+           <button onclick="location.reload()">Reload</button>
+           `
+       }
+    }
+})
