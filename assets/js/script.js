@@ -48,11 +48,11 @@ const questionData = [
         correct: "d",
     },
     {
-        question: "7.According to the bible how is God's love and salvation demonstrated?",
-        a: "God's love is conditional upon human perfection.",
-        b: "God sent His Son to Earth for His own benefit.",
-        c: "God's love is demonstrated by sending His Son for our salvation.",
-        d: "God's love is limited to a single nation.",
+        question: "7.What was the first miracle of Jesus on earth?",
+        a: "Healing a blind man",
+        b: "Calming the storms",
+        c: "Turning water into wine",
+        d: "Walking on water",
         correct: "c",
     },
     {
