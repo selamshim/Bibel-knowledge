@@ -75,6 +75,30 @@ The website was deployed through the use of GitHub Pages, a feature built in to 
 6. Type "git clone", and then paste the URL you copied earlier. It will look like this, with your GitHub username instead of "YOUR-USERNAME": "$ git clone https://github.com/YOUR-USERNAME/DESIRED-REPOSITORY"
 7. Press Enter. Your local clone will be created.
 
+# Technologies Used
+
+### Languages
+The following languages were used to develop the website:
+- HTML
+- CSS
+- JavaScript
+
+### Resources and Tools
+The following resources and tools were used to develop the website:
+- Git
+- Github
+- Gitpod
+- Favicon
+- DevTools
+- W3 Schools
+- Codecademy
+- Google Fonts
+- Font Awesome
+- Stack Overflow
+- JSHint Validation
+- VS code
+
+
 # Credits
 
 A list of references and tutorials used for the site:
