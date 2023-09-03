@@ -80,28 +80,27 @@ const questionData = [
         correct: "b",
     },
 ];
-const quiz= document.getElementById('quiz')
-const answerEls = document.querySelectorAll('.quizAnswer')
-const questionEl = document.getElementById('question')
-const choice_a_text = document.getElementById('choice_a_text')
-const choice_b_text = document.getElementById('choice_b_text')
-const choice_c_text = document.getElementById('choice_c_text')
-const choice_d_text = document.getElementById('choice_d_text')
-const submitBtn = document.getElementById('submit')
+const quiz= document.getElementById('quiz');
+const answerEls = document.querySelectorAll('.quizAnswer');
+const questionEl = document.getElementById('question');
+const choice_a_text = document.getElementById('choice_a_text');
+const choice_b_text = document.getElementById('choice_b_text');
+const choice_c_text = document.getElementById('choice_c_text');
+const choice_d_text = document.getElementById('choice_d_text');
+const submitBtn = document.getElementById('submit');
 
 
-
-let currentQuiz = 0
-let score = 0
+let currentQuiz = 0;
+let score = 0;
 loadQuiz()
 function loadQuiz() {
     deselectAnswers()
     const currentQuestionData = questionData[currentQuiz]
     questionEl.innerText = currentQuestionData.question
-    choice_a_text.innerText = currentQuestionData.a
-    choice_b_text.innerText = currentQuestionData.b
-    choice_c_text.innerText = currentQuestionData.c
-    choice_d_text.innerText = currentQuestionData.d
+    choice_a_text.innerText = currentQuestionData.a;
+    choice_b_text.innerText = currentQuestionData.b;
+    choice_c_text.innerText = currentQuestionData.c;
+    choice_d_text.innerText = currentQuestionData.d;
 }
 function deselectAnswers() {
     answerEls.forEach(answerEl => answerEl.checked = false)
