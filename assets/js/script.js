@@ -53,7 +53,7 @@ submitBtn.addEventListener('click', () => {
        //if the question is finished the score is displayed
        else {
            quiz.innerHTML = `
-           <h2>You answered ${score}/${questionData.length} questions </h2>
+           <h2>You scored ${score}/${questionData.length} . Enjoy Reading Bibel</h2>
            <button onclick="location.reload()">Reload</button>
            `
        }
