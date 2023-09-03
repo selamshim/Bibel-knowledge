@@ -88,6 +88,9 @@ const choice_b_text = document.getElementById('choice_b_text')
 const choice_c_text = document.getElementById('choice_c_text')
 const choice_d_text = document.getElementById('choice_d_text')
 const submitBtn = document.getElementById('submit')
+
+
+
 let currentQuiz = 0
 let score = 0
 loadQuiz()

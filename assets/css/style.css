@@ -10,7 +10,7 @@ body{
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
+  overflow:scroll;
   margin: 0;
 }
 .container{
@@ -18,7 +18,7 @@ body{
   border-radius: 15px;
   box-shadow: 0 0 10px 2px rgba(118, 11, 11, 0.471);
   width: 600px;
-  overflow: hidden;
+  overflow:scroll;
 }
 .question-header{
   padding: 4rem;
