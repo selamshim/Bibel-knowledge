@@ -26,6 +26,11 @@ h1{
   width: 600px;
   overflow:scroll;
 }
+
+.hide {
+  display: none;
+}
+
 .question-header{
   padding: 2rem;
 }

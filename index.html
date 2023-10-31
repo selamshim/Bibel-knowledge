@@ -13,8 +13,42 @@
     <title>Bible quize</title>
 </head>
 <body>
+
+    <!--start interface -->
+    <section class="start-area container" id="start-area">
+        <div class="section-header">
+            <h2>Welcome to the <span id="colored-js">Bibel Quiz</span> Test!</h2>
+        </div>
+        <div class="section-text">
+            <p>Are you ready to try out your knowledge about Bibel?</p>
+            <p>First things first, what's your name</p>
+        </div>
+        <div class="buttons-alignment">
+            <label for="user-name" class="visuallyhidden">Name:</label>
+            <input type="text" id="user-name" name="user-name" onblur="getUserName();" class="color-entered-text form-input" placeholder="Your Name Here" minlength="2" maxlength="12">
+            <div id="error-message"></div>
+            <div class="submit-btn">
+                <button aria-label="Submit your answer." id="user-submit">Submit</button>
+            </div>
+        </div>
+    </section>
+
+     <!-- Rules Interface -->
+     <section class="rules-area container hide" id="rules-area">
+        <div class="section-header" id="alignment-header-rules"> 
+            <h2>Quiz Rules</h2>
+        </div>
+        <div class="section-text" id="rules-text">
+            <p>So, the rules are pretty simple. This test contains 10 questions and you'll have to select one option among the four options provided. In the end, you will see how many you got right.</p>
+            <p>Ready, set, go!</p>
+        </div>
+        <div class="submit-btn buttons-alignment">
+            <button aria-label="Start the quiz." id="start-quiz-btn">Start Quiz</button>
+        </div>
+    </section>
+
     <!--quize container-->
-    <section class="container">
+    <section class="questions-area container hide" id="questions-area">
         <h1>Bibel Quiz</h1>
         <div class ="question-header"  id="quiz">
             <h2 id="question">1. The text of a question</h2>
