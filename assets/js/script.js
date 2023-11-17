@@ -91,40 +91,53 @@ function quizLoad() {
   
   // Function to deselect all answer choices
   function deselectAnswers() {
-    answerEls.forEach(answerEl => answerEl.checked = false);
-  }
+    for (let i = 0; i < answerEls.length; i++) {
+      answerEls[i].checked = false;
+    }
+  }  
   
   // Function to get the selected answer
   function getSelected() {
     let quizAnswer;
-    // Check which answer is selected by the user
-    answerEls.forEach(answerEl => {
-      if(answerEl.checked) {
-        quizAnswer = answerEl.id; // Record the ID of the selected answer
+    for (let i = 0; i < answerEls.length; i++) {
+      if (answerEls[i].checked) {
+        quizAnswer = answerEls[i].id; // Record the ID of the selected answer
+        break; // Exit the loop once an answer is found
       }
-    });
+    }
     return quizAnswer; // Return the ID of the selected answer
-  }
+  }  
   
   // Event listener for handling quiz submission
-  submitBtn.addEventListener('click', () => {
+  function submitQuiz() {
     const quizAnswer = getSelected(); // Get the selected answer
-    if(quizAnswer) { // If an answer is selected
-      if(quizAnswer === questionData[currentQuiz].correct) { // If the selected answer is correct
+    if (quizAnswer) { // If an answer is selected
+      if (quizAnswer === questionData[currentQuiz].correct) { // If the selected answer is correct
         score++; // Increment the score
       }
       currentQuiz++; // Move to the next question
-      if(currentQuiz < questionData.length) { // If there are more questions remaining
+      if (currentQuiz < questionData.length) { // If there are more questions remaining
         quizLoad(); // Load the next question
-      } else { // If all questions are answered
-        // Display the final score and a reload button
-        quiz.innerHTML = `
-          <h2>You scored ${score}/${questionData.length}. Enjoy Reading Bibel.</h2>
-          <button onclick="location.reload()">Reload</button>
-        `;
+      } else { 
+      const resultHeader = document.createElement('h2');
+      resultHeader.textContent = `You scored ${score}/${questionData.length}. Enjoy Reading Bibel.`;
+      
+      const reloadButton = document.createElement('button');
+      reloadButton.textContent = 'Reload';
+      reloadButton.onclick = function() {
+        location.reload();
+      };
+      
+      quiz.innerHTML = ''; // Clear existing content
+      quiz.appendChild(resultHeader);
+      quiz.appendChild(reloadButton);
+      
       }
     }
-  });
+  }
+  
+  submitBtn.addEventListener('click', submitQuiz);
+  
   
   // Initialize the quiz by loading the first question
   quizLoad();
