@@ -3,7 +3,7 @@
 
 const startArea = document.getElementById("introduction");
 const nameInput = document.getElementById("name");
-const rulesArea = document.getElementById("rules-area");
+const rulesArea = document.getElementById("instruction");
 const submitButton = document.getElementById("name-submit");
 const startQuiz = document.getElementById("start-quiz-btn");
 const formInput = document.querySelector(".form-input");
