@@ -108,6 +108,7 @@ A list of references and tutorials used for the site:
 * [Bibel Quiz Questions](https://www.funtrivia.com/trivia-quiz/Religion/The-Holy-Bible-71300.html)
 * [Quiz tuturial](https://www.youtube.com/watch?v=CqddbIrEM5I&t=73s)
 * Love Maths Project
+* [Valentino Braga](https://github.com/tinobragaa?tab=repositories)
 
 # Acknowledgements
 

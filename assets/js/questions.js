@@ -10,7 +10,7 @@ const questionData = [
     {
         question: "2.According to proverbs, what is the beginning of wisdom?",
         a: "Humility and meekness",
-        b: "Knowledge",
+        b: "Love",
         c: "Fear of the lord ",
         d: "Knowledge ",
         correct: "c",

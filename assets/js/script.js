@@ -32,7 +32,7 @@ function UserNameValue() {
 
     // enable/disable buttons, tutorial : https://stackdiary.com/enable-disable-button-javascript/
 
-  if (userName === "" || userName.length < 3 || userName.length > 10 || /\d/.test(userName)) {
+  if (userName === "" || userName.length < 2 || userName.length > 10 || /\d/.test(userName)) {
     nameValue.value = "";
     submitButton.disabled = true;
     errorMsg.textContent = "Please enter a valid name (3-10 letters and no numbers)";
@@ -59,19 +59,14 @@ submitButton.addEventListener("click", () => {
   submitButton.disabled = true; 
   formInput.addEventListener("keyup", setButtonState);
 
-/**
- * This function prevents the user to continue the game without filling in the input field.
- * When the user clicks without filling in the input field, an alert message shows up.
- */
-function setButtonState() {
-    if (document.querySelector(".form-input").value === "") {
-        submitButton.disabled = true;
-    } else {
-        submitButton.disabled = false;
-    };
-};
 
-// Start quiz button to load quiz interface
+// Function to handle enabling/disabling submit button based on input
+function setButtonState() {
+    const formInputValue = document.querySelector(".form-input").value;
+    submitButton.disabled = formInputValue === "" ? true : false;
+  }  
+
+// Event listener for the start quiz button to load the quiz interface
 startQuiz.addEventListener("click", () => {
   instruction.classList.add("visibel");
   questionsArea.classList.remove("visibel");
