@@ -26,6 +26,10 @@ h1{
   width: 600px;
   overflow:scroll;
 }
+.welcome{
+text-align: center;
+text-decoration:underline;
+}
 
 .hide {
   display: none;

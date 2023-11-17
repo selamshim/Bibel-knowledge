@@ -1,10 +1,10 @@
 //Variables
 //js first area
 
-const startArea = document.getElementById("start-area");
-const nameInput = document.getElementById("user-name");
+const startArea = document.getElementById("introduction");
+const nameInput = document.getElementById("name");
 const rulesArea = document.getElementById("rules-area");
-const submitButton = document.getElementById("user-submit");
+const submitButton = document.getElementById("name-submit");
 const startQuiz = document.getElementById("start-quiz-btn");
 const formInput = document.querySelector(".form-input");
 const questionsArea = document.getElementById("questions-area");
@@ -28,7 +28,7 @@ let userName= null
 youtube tutorial https://www.youtube.com/watch?v=CqddbIrEM5I&t=73s to get the concept */
 
 function getUserName() {
-    let userNameInput = document.getElementById("user-name");
+    let userNameInput = document.getElementById("name");
     userName = userNameInput.value.trim();
     let rulesText = document.getElementById("rules-text");
     let errorMessage = document.getElementById("error-message");
