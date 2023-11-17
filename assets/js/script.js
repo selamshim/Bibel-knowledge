@@ -1,5 +1,5 @@
 //Variables
-//js first area
+// Intrroduction part
 
 const introduction = document.getElementById("introduction");
 const nameInput = document.getElementById("name");
@@ -9,7 +9,7 @@ const startQuiz = document.getElementById("start-quiz-btn");
 const formInput = document.querySelector(".form-input");
 const questionsArea = document.getElementById("questions-area");
 
-//js second area
+//quuz part
 const quiz= document.getElementById('quiz');
 const answerEls = document.querySelectorAll('.quizAnswer');
 const questionEl = document.getElementById('question');
@@ -19,24 +19,21 @@ const choice_c_text = document.getElementById('choice_c_text');
 const choice_d_text = document.getElementById('choice_d_text');
 const submitBtn = document.getElementById('submit');
 
-//question load area
-
 let currentQuiz = 0;
 let score = 0;
 let userName= null
-/*this function load the quize i have used the 
-youtube tutorial https://www.youtube.com/watch?v=CqddbIrEM5I&t=73s to get the concept */
 
+// introduction part
 function UserNameValue() {
-    let userNameInput = document.getElementById("name");
-    userName = userNameInput.value.trim();
+    let nameValue = document.getElementById("name");
+    userName = nameValue.value.trim();
     let rulesText = document.getElementById("rules-text");
     let errorMsg = document.getElementById("error-msg");
 
     // enable/disable buttons, tutorial : https://stackdiary.com/enable-disable-button-javascript/
 
   if (userName === "" || userName.length < 3 || userName.length > 10 || /\d/.test(userName)) {
-    userNameInput.value = "";
+    nameValue.value = "";
     submitButton.disabled = true;
     errorMsg.textContent = "Please enter a valid name (3-10 letters and no numbers)";
     errorMsg.style.display = "block";
@@ -88,6 +85,10 @@ startQuiz.addEventListener("click", () => {
 
 
 // Questions Interface
+
+/*this function load the quize i have used the 
+youtube tutorial https://www.youtube.com/watch?v=CqddbIrEM5I&t=73s to get the concept */
+
 quizLoad();
 function quizLoad() {
     deselectAnswers()
