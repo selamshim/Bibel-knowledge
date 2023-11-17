@@ -23,8 +23,8 @@
             <p>would you like to test your basic bibel knowledge? Lets go!</p>
             <p>what is your name please</p>
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" onblur="getUserName();" class="form-input" placeholder="Your Name Here" minlength="2" maxlength="12">
-            <div id="error-message"></div>
+            <input type="text" id="name" name="name" onblur="UserNameValue();" class="form-input" placeholder="Your Name Here" minlength="2" maxlength="12">
+            <div id="error-msg"></div>
             <div class="submit-btn">
                 <button aria-label="Submit name." id="name-submit">Submit</button>
             </div>
@@ -32,12 +32,12 @@
     </section>
 
      <!-- instruction -->
-     <section class="instruction container hide" id="instruction">
+     <section class="instruction container visibel" id="instruction">
         <div> 
             <h2 class="welcome">Quiz Rules</h2>
         </div>
         <div id="rules-text">
-            <p>The quiz contains 10 multiple choice questions and need to select one option among the four options provided. At the end, you will see your score.</p>
+            <p>The quiz contains 10 multiple choice questions and you need to select one option among the four options provided. At the end, you will see your score.</p>
         </div>
         <div class="submit-btn buttons-alignment">
             <button aria-label="Start the quiz." id="start-quiz-btn">Start Quiz</button>
@@ -45,7 +45,7 @@
     </section>
 
     <!--quize container-->
-    <section class="questions-area container hide" id="questions-area">
+    <section class="questions-area container visibel" id="questions-area">
         <h1>Bibel Quiz</h1>
         <div class ="question-header"  id="quiz">
             <h2 id="question">1. The text of a question</h2>

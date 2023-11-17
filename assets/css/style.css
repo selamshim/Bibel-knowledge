@@ -31,11 +31,9 @@ text-align: center;
 text-decoration:underline;
 }
 
-.hide {
+.visibel{
   display: none;
 }
-
-
 
 .question-header{
   padding: 2rem;

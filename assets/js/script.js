@@ -1,9 +1,9 @@
 //Variables
 //js first area
 
-const startArea = document.getElementById("introduction");
+const introduction = document.getElementById("introduction");
 const nameInput = document.getElementById("name");
-const rulesArea = document.getElementById("instruction");
+const instruction = document.getElementById("instruction");
 const submitButton = document.getElementById("name-submit");
 const startQuiz = document.getElementById("start-quiz-btn");
 const formInput = document.querySelector(".form-input");
@@ -27,37 +27,36 @@ let userName= null
 /*this function load the quize i have used the 
 youtube tutorial https://www.youtube.com/watch?v=CqddbIrEM5I&t=73s to get the concept */
 
-function getUserName() {
+function UserNameValue() {
     let userNameInput = document.getElementById("name");
     userName = userNameInput.value.trim();
     let rulesText = document.getElementById("rules-text");
-    let errorMessage = document.getElementById("error-message");
+    let errorMsg = document.getElementById("error-msg");
 
-    // Code to enable/disable buttons, credit:
-  // https://stackdiary.com/enable-disable-button-javascript/
+    // enable/disable buttons, tutorial : https://stackdiary.com/enable-disable-button-javascript/
+
   if (userName === "" || userName.length < 3 || userName.length > 10 || /\d/.test(userName)) {
     userNameInput.value = "";
     submitButton.disabled = true;
-    errorMessage.textContent = "Please enter a valid name (3-10 letters and no numbers)";
-    errorMessage.style.display = "block";
+    errorMsg.textContent = "Please enter a valid name (3-10 letters and no numbers)";
+    errorMsg.style.display = "block";
     return;
   } else {
-    errorMessage.style.display = "none";
+    errorMsg.style.display = "none";
   };
 
-  rulesText.innerText = `So, ${userName}, the rules are pretty simple. 
-  This test contains 10 questions and you'll have to select one option among the four options provided.
-  In the end you will see how many you got it right.`;
+  rulesText.innerText = `The quiz contains 10 multiple choice questions and you need to select one option among the four options provided.
+   when you are done, you will see your score. good luck ${userName}`;
 
   submitButton.disabled = false;
-  errorMessage.style.display = "none";
+  errorMsg.style.display = "none";
 };
 
 
 // Submit button to load rules interface
 submitButton.addEventListener("click", () => {
-    startArea.classList.add("hide");
-    rulesArea.classList.remove("hide");
+    introduction.classList.add("visibel");
+    instruction.classList.remove("visibel");
   });
   
   submitButton.disabled = true; 
@@ -83,8 +82,8 @@ function setButtonState() {
 
 // Start quiz button to load quiz interface
 startQuiz.addEventListener("click", () => {
-  rulesArea.classList.add("hide");
-  questionsArea.classList.remove("hide");
+  instruction.classList.add("visibel");
+  questionsArea.classList.remove("visibel");
 });  
 
 
