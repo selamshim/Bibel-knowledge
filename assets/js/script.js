@@ -30,23 +30,21 @@ function UserNameValue() {
     let instructionText = document.getElementById("instruction-text");
     let errorMsg = document.getElementById("error-msg");
 
-    // enable/disable buttons, tutorial : https://stackdiary.com/enable-disable-button-javascript/
-
-  if (userName === "" || userName.length < 2 || userName.length > 10 || /\d/.test(userName)) {
-    nameValue.value = "";
-    submitButton.disabled = true;
-    errorMsg.textContent = "Please enter a valid name (3-10 letters and no numbers)";
-    errorMsg.style.display = "block";
-    return;
-  } else {
-    errorMsg.style.display = "none";
-  };
-
-  instructionText.innerText = `The quiz contains 10 multiple choice questions and you need to select one option among the four options provided.
-   when you are done, you will see your score. good luck ${userName}`;
-
-  submitButton.disabled = false;
-  errorMsg.style.display = "none";
+    // Check if the username is valid based on certain criteria
+    const isValidName = !(userName === "" || userName.length < 3 || userName.length > 10 || /\d/.test(userName));
+    // If the name is valid, keep the entered value; otherwise, clear the input
+    nameValue.value = isValidName ? nameValue.value : "";
+    // Enable or disable the submit button based on the validity of the name
+    submitButton.disabled = !isValidName;
+    errorMsg.textContent = isValidName ? "" : "Please enter a valid name (3-10 letters and no numbers)";
+    errorMsg.style.display = isValidName ? "none" : "block";
+    // Construct the text containing quiz instructions and a personalized message using userName
+    const quizInstructions = `The quiz contains 10 multiple choice questions and you need to select one option among the four options provided. When you are done, you will see your score. Good luck ${userName}`;
+    instructionText.innerText = quizInstructions;
+    
+   // Enable the submit button by removing the 'disabled' attribute
+   submitButton.removeAttribute('disabled');
+   errorMsg.style.display = 'none';
 };
 
 
